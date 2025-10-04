@@ -1,0 +1,106 @@
+.status-chart {
+  --chartRingSize: 90px;
+  --chartRingThickness: 8px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  row-gap: 20px;
+
+  @include mobile {
+    flex-direction: row;
+    column-gap: 20px;
+  }
+
+  &__visual {
+    position: relative;
+    width: var(--chartRingSize);
+    height: var(--chartRingSize);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__ring {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--color-gray-alt);
+
+    &--completed {
+      background: conic-gradient(
+        var(--color-green) 84%,
+        var(--color-gray-alt) 84%
+      );
+    }
+    &--progress {
+      background: conic-gradient(
+        var(--color-blue) 46%,
+        var(--color-gray-alt) 46%
+      );
+    }
+    &--not-started {
+      background: conic-gradient(
+        var(--color-red) 13%,
+        var(--color-gray-alt) 13%
+      );
+    }
+  }
+
+  &__percentage {
+    font-size: 20px;
+    font-weight: 500;
+
+    // Mask properties
+    position: absolute;
+    width: calc(var(--chartRingSize) - (var(--chartRingThickness) * 2.5));
+    height: calc(var(--chartRingSize) - (var(--chartRingThickness) * 2.5));
+    border-radius: 50%;
+    background-color: var(--color-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .status-charts__ring--completed & {
+      color: var(--color-green);
+    }
+    .status-charts__ring--progress & {
+      color: var(--color-blue);
+    }
+    .status-charts__ring--not-started & {
+      color: var(--color-red);
+    }
+  }
+
+  &__label {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    font-size: 15px;
+    font-weight: 500;
+  }
+
+  &__dot {
+    @include square(7px);
+
+    border-radius: 50%;
+
+    &--completed {
+      background-color: var(--color-green);
+    }
+
+    &--progress {
+      background-color: var(--color-blue);
+    }
+
+    &--not-started {
+      background-color: var(--color-red);
+    }
+  }
+}

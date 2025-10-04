@@ -1,0 +1,35 @@
+.users {
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    border-radius: var(--border-radius-small);
+    overflow: hidden;
+    cursor: pointer;
+
+    &:last-child {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+
+      &::after {
+        @include absolute-centered;
+
+        content: "+4";
+        position: absolute;
+        font-size: 14px;
+        color: var(--color-light);
+      }
+    }
+  }
+}

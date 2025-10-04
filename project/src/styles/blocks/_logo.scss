@@ -1,0 +1,9 @@
+.logo {
+  flex-shrink: 0;
+
+  &__image {
+    @include desktop {
+      max-width: 140px;
+    }
+  }
+}

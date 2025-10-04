@@ -1,0 +1,14 @@
+.icon-button {
+  @include square(36px);
+  @include center-content(true);
+  @include hover-effect;
+
+  border-radius: 8px;
+  background-color: var(--color-accent);
+
+  svg {
+    @include square(16px);
+
+    color: var(--color-light);
+  }
+}

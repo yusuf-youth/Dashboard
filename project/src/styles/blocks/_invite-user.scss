@@ -1,0 +1,31 @@
+.invite-user {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+
+  &__label {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__input-group {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+  }
+
+  &__input {
+    max-width: 400px;
+    width: 100%;
+    height: var(--input-height);
+    padding-left: 14px;
+    font-size: 13px;
+    border: var(--border);
+    border-radius: var(--border-radius-small);
+    outline: none;
+  }
+
+  &__button {
+    min-width: 120px;
+  }
+}

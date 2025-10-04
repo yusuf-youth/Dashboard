@@ -1,0 +1,16 @@
+.button {
+  @include hover-effect;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  padding-inline: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-light);
+  background-color: #f24e1e;
+  text-transform: capitalize;
+  border-radius: var(--border-radius-small);
+  white-space: nowrap;
+}

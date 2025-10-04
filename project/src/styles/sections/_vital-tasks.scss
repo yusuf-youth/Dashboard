@@ -1,0 +1,23 @@
+.vital-tasks {
+  &,
+  &__list,
+  &__item,
+  &__box {
+    height: 100%;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+
+    @include mobile {
+      row-gap: 10px;
+    }
+  }
+}

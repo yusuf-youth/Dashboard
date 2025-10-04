@@ -1,0 +1,47 @@
+.task-form {
+  display: flex;
+  column-gap: 35px;
+
+  &__label {
+    margin-bottom: 10px;
+  }
+
+  &__description,
+  &__upload-box {
+    height: 205px;
+    padding: 12px 15px;
+    font-size: 13px;
+    border: var(--border);
+    border-radius: var(--border-radius-small);
+  }
+
+  &__description {
+    width: 511px;
+    outline: none;
+    resize: none;
+  }
+
+  &__upload-box,
+  &__prompt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__upload-box {
+    justify-content: space-around;
+    width: 215px;
+  }
+
+  &__prompt {
+    row-gap: 7px;
+    color: var(--color-gray-alt);
+  }
+
+  &__button {
+    padding: 5px 10px;
+    color: currentColor;
+    border: var(--border);
+    border-radius: var(--border-radius-small);
+  }
+}

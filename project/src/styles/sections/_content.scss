@@ -1,0 +1,17 @@
+.content {
+  max-width: var(--container-width);
+  padding: 55px 75px 30px;
+
+  @include desktop {
+    padding-inline: 40px;
+  }
+
+  @include tablet {
+    padding-inline: 25px;
+  }
+
+  @include mobile-s {
+    padding-top: 30px;
+    padding-inline: 10px;
+  }
+}

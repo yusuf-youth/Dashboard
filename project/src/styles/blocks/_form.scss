@@ -1,0 +1,16 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    margin-top: 15px;
+  }
+
+  &__button {
+    min-width: 130px;
+  }
+}

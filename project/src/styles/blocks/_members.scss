@@ -1,0 +1,46 @@
+.members {
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__title,
+  &__name {
+    font-weight: 600;
+  }
+
+  &__list,
+  &__item,
+  &__person,
+  &__dropdown-button {
+    display: flex;
+  }
+
+  &__list {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  &__item {
+    justify-content: space-between;
+  }
+
+  &__person {
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  &__email {
+    font-size: 10px;
+  }
+
+  &__dropdown-button {
+    align-items: center;
+    column-gap: 15px;
+    font-size: 13px;
+    font-weight: 500;
+
+    svg {
+      fill: white;
+    }
+  }
+}

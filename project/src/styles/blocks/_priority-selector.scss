@@ -1,0 +1,60 @@
+.priority-selector {
+  &__title {
+    margin-bottom: 10px;
+  }
+
+  &__options,
+  &__option {
+    display: flex;
+    align-items: center;
+  }
+  &__options {
+    column-gap: 50px;
+    padding-left: 15px;
+  }
+
+  &__option {
+    column-gap: 5px;
+  }
+
+  &__label {
+    position: relative;
+    height: 18px;
+    margin-top: 2px;
+    font-size: 13px;
+    color: var(--color-gray-alt);
+
+    &--extreme {
+      &::before {
+        background-color: var(--color-red);
+      }
+    }
+
+    &--moderate {
+      &::before {
+        background-color: var(--color-sky-blue);
+      }
+    }
+
+    &--low {
+      &::before {
+        background-color: var(--color-green);
+      }
+    }
+
+    &::before {
+      @include square(7px);
+
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -15px;
+      transform: translateY(-50%);
+      border-radius: 50%;
+    }
+  }
+
+  &__radio {
+    @include square(15px);
+  }
+}

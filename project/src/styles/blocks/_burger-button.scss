@@ -1,0 +1,15 @@
+.burger-button {
+  @include square(44px);
+  @include center-content;
+
+  border-radius: var(--border-radius-small);
+  background-color: var(--color-accent);
+
+  &__line {
+    display: inline-block;
+    width: 70%;
+    height: 1px;
+    background-color: var(--color-dark);
+    box-shadow: 0 8px 0 0 currentColor, 0 -8px 0 0 currentColor;
+  }
+}

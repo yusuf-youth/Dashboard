@@ -1,0 +1,33 @@
+.user-profile-card {
+  --profileAvatarSize: 86px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: calc((var(--profileAvatarSize) / 2) * -1);
+  color: white;
+  user-select: none;
+
+  &__image {
+    margin-bottom: 10px;
+  }
+
+  &__name {
+    margin-bottom: 2px;
+    font-size: 16px;
+    font-weight: 600;
+    color: currentColor;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__email {
+    font-size: 12px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+}
