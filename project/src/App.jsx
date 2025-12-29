@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <h1 className="visually-hidden">Dashboard</h1>
-      <Header />
+      {/* <Header /> */}
       <main className="main">
         <Sidebar />
         <Content />
